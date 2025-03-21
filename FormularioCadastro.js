@@ -3,7 +3,7 @@
 const express = require("express"); // importa livraria do EXPRESS
 const sqlite3 = require("sqlite3"); // importa livraria do sqlite3
 
-const PORT = 3000; // Porta TCP do servidor HTTP da aplicação
+// const PORT = 3000; // Porta TCP do servidor HTTP da aplicação
 
 const app = express(); // Instância para o uso do EXPRESS
 

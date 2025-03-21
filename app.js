@@ -34,10 +34,10 @@ const cadastro = "Você está na página de CADASTRO  <br> <a href='/'>Voltar</a
 // primeiro são os dados do servidor (REQUISITION - 'req') o segundo, são os
 // dados que serão enviados ao cliente (RESULT - 'res')
 
-app.get("/index", (req, res) => {
+app.get("/", (req, res) => {
   // Rota raiz do meu servidor, acesse o browser com o endereço http://localhost:3000/
   // res.send(index);
-  res.render(index); // Utilizando o render pela pasta views
+  res.render("index"); // Utilizando o render pela pasta views
 });
 
 app.get("/home", (req, res) => {
@@ -52,7 +52,7 @@ app.get("/sobre", (req, res) => {
 
 app.get("/login", (req, res) => {
   // Rota raiz do meu servidor da pagina LOGIN, acesse o browser com o endereço http://localhost:3000/login
-  res.send(login);
+  res.send("login");
 });
 
 app.get("/cadastro", (req, res) => {

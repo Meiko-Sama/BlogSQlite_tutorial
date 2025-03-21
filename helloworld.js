@@ -2,7 +2,7 @@
 
 const express = require("express");
 
-const PORT = 3000; // Porta TCP do servidor HTTP da aplicação
+// const PORT = 3000; // Porta TCP do servidor HTTP da aplicação
 
 const app = express();
 
