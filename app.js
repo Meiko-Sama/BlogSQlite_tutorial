@@ -52,7 +52,12 @@ app.get("/sobre", (req, res) => {
 
 app.get("/login", (req, res) => {
   // Rota raiz do meu servidor da pagina LOGIN, acesse o browser com o endereço http://localhost:3000/login
-  res.send("login");
+  res.render("login");
+});
+
+app.post("/login", (req, res) => {
+  // Rota raiz do meu servidor da pagina LOGIN, acesse o browser com o endereço http://localhost:3000/login
+  res.send("login ainda não emplementado.");
 });
 
 app.get("/cadastro", (req, res) => {
