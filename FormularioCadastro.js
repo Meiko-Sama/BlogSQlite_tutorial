@@ -17,7 +17,11 @@ db.serialize(() => {
   );
 });
 
-app.use("/static", express);
+// Primeiro parametro é o caminho da URL, enquanto o segundo parâmetro éo caminho da pasta
+app.use("/static", express.static(__dirname + "/static"));
+
+// Configurar EJS como motor de visualização
+app.set("view engine", "ejs");
 
 const index =
   "<a href='/home'>Home</a> <br><a href='/sobre'>Sobre</a> <br> <a href='/login'>Login</a> <br> <a href='/cadastro'>Cadastro</a>";

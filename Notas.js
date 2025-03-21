@@ -32,4 +32,27 @@ pasta do repositorio. Por padrão o git cria a pasta com o nome do repositorio
 As rotas e renderização são considerados middlewares, criados pela a equipe de 
 desenvolvimento do ExpressJS. O ExpressJS implementa e melhora a biblioteca do
 nodeJS que manipula o protocolo HTTP/HTTPS
+
+No ExpressJS, para configurar uma pasta, no sistema de arquivos, o metodo utilizado
+é o 'use', este método precisa de dois parâmetros, o primiero, é como o cliente HTTP
+irá requisitar o arquivo, ou seja, este parâmetro fará parte da URL que o BROWSER(cliente)
+irá solicitar.
+
+O segundo parâmetro é o caminho da porta, no sistema de arquivos do sistema operacional
+em que o back-end está rodando. Portanto deve-se obedecer as regras do sistemas de arquivos do SO
+
+-> EXEMPLO <-
+
+app.use("/static", express.static( __dirname + "/static"));
+
+NA QUAL:
+
+"/static" = "ENDPOINT"/"rota" que o cliente irá visualizar
+
+express.static = Middleware p/configurar uma "pasta" c/ arquivo estaticos
+
+( __dirname + "/static")) = "__dirname ", é uma variável interna do node, ela indentifica a pasta
+ do projeto no SO (Sistemas de Arquivos)
+
+
 */
