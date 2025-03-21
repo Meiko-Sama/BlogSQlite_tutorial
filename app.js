@@ -34,7 +34,7 @@ const cadastro = "Você está na página de CADASTRO  <br> <a href='/'>Voltar</a
 // primeiro são os dados do servidor (REQUISITION - 'req') o segundo, são os
 // dados que serão enviados ao cliente (RESULT - 'res')
 
-app.get("/", (req, res) => {
+app.get("/index", (req, res) => {
   // Rota raiz do meu servidor, acesse o browser com o endereço http://localhost:3000/
   // res.send(index);
   res.render(index); // Utilizando o render pela pasta views
