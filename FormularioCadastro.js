@@ -1,29 +1,3 @@
-/* INICIAR UM PROJETO NO NODE JS
-
-npm init - Digite na "raiz" do projeto, serve para iniciar o projeto 
-
-npm install ou npm i - são as instalações das bibliotecas do node onde ele chama de 'MODULE'
-
-O npm init cria o arquivo chamado "package.json", este arquivo é usado pelo npm/node
-para 'administrar' os módulos/bibliotecas/libs do projeto.
-
-Para usar um projeto que usa o node, é só fazer download do projeto, abrir um terminal
-ir para a porta do projeto e digitar esse comando "npm instal" sem parâmetro, neste 
-processo o npm irá localizar o arquivo e vai instalar todas as dependências do projeto. 
-Para rodar o projeto, após instalar as dependências, na raiz do projeto, digite: 
-"node (arquivo do projeto).js"
-
---- GIT ---
-
- git clone <link do repositorio>
-
- Caso já exista uma pasta com o nome do repositorio e esta pasta esteja vazia, o cloneirá ser feito,
- caso a pasta contenha algum arquivo , o 'git clone' não ira funcionar, para este caso digite:
- "git clone <nome do repositorio> nome da pasta" onde "nome da pasta" precisa ser diferente da
- pasta do repositorio. Por padrão o git cria a pasta com o nome do repositorio
-
-*/
-
 // Criação da biblioteca
 
 const express = require("express"); // importa livraria do EXPRESS
@@ -42,6 +16,8 @@ db.serialize(() => {
     "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)"
   );
 });
+
+app.use("/static", express);
 
 const index =
   "<a href='/home'>Home</a> <br><a href='/sobre'>Sobre</a> <br> <a href='/login'>Login</a> <br> <a href='/cadastro'>Cadastro</a>";
